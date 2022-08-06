@@ -1,0 +1,7 @@
+<meta charset="utf-8">
+
+관심종목 목록<br/>
+
+{% for data in datas %}
+	{{data.name}} / {{data.code}} / {{data.info.stock}} / {{data.info.status}} <br/>
+{% endfor %}
