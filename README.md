@@ -2,10 +2,9 @@
 
 주가 확인 사이트
 
+```bash
 pip install finance-datareader
-
-
 pip install matplotlib
-
-
 pip install scikit-learn
+```
+
