@@ -3,5 +3,14 @@
 관심종목 목록<br/>
 
 {% for data in datas %}
-	{{data.name}} / {{data.code}} / {{data.info.stock}} / {{data.info.status}} <br/>
+	<a href = "https://finance.naver.com/item/main.naver?code={{data.code}}">{{data.name}}</a> / {{data.code}} / {{data.info.stock}} 
+	/ {{data.info.status}} /
+	{%if data.info.status == '상승' %}
+		<font color = red>
+	{%elif data.info.status == '하강' %}
+		<font color=blue>
+	{% else %}
+		<font color=black>
+	{%endif%}
+	{{data.info.delta}} </font> <br/>
 {% endfor %}
